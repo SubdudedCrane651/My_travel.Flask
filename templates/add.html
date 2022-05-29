@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>{{ title }}</title>
+</head>
+<body>
+  <center>
+    <h1>{{ title }}</h1>
+  </center>
+  <a href="/">Main Menu</a>
+    <br>
+    <h2>1-Airfaire
+        2-Transport
+        3-Hotel
+        4-Food
+        5-Misc</h2>
+  
+  <form role="form" method='POST' action='/add'>
+        <h2>What do you choose :<input type="text" name="choice" /></h2>
+    <h2>What amount :<input type="text" name="amount" /></h2>
+    <h2>What date MM/DD/YYYY:<input type="text" name="date" /></h2>
+        <p><input type="submit" name="Submit" value="Submit" /></p>
+    </form>
+  {% autoescape false %}
+        <p>{{ result }}</p>
+  {% endautoescape %}
+ </body>
+
+</html>
